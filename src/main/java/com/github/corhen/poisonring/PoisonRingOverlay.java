@@ -48,7 +48,12 @@ public class PoisonRingOverlay extends Overlay {
         int finalY = baseOrbY + config.shiftY();
         int finalDiameter = bounds.height + config.sizeAdjust();
         
-        double progress = (double) plugin.getTicksUntilDamage() / plugin.getPoisonTickRate();
+        double progress;
+        if (config.testMode() && plugin.getTicksUntilDamage() == 0) {
+            progress = 0.5; // Show a half-circle in test mode so you can see the arc
+        } else {
+            progress = (double) plugin.getTicksUntilDamage() / plugin.getPoisonTickRate();
+        };
         
         int startAngle = 90;
         int extent = (int) -(360 * progress); 

@@ -98,7 +98,9 @@ public class PoisonRingPlugin extends Plugin {
     }
 
     public int getTicksUntilDamage() { return ticksUntilDamage; }
-    public boolean isPoisoned() { return poisonValue > 0; }
+    public boolean isPoisoned() { 
+        return poisonValue > 0 || config.testMode(); 
+    }
     public boolean isVenom() { return isVenom; }
     public int getPoisonTickRate() { return POISON_TICK_RATE; }
 }

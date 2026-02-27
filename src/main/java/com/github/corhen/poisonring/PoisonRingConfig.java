@@ -57,6 +57,16 @@ public interface PoisonRingConfig extends Config {
     default Color poisonColor() {
         return new Color(0, 255, 0, 255);
     }
+    
+    @ConfigItem(
+        keyName = "testMode",
+        name = "Test Mode",
+        description = "Displays the ring for alignment purposes without being poisoned",
+        position = 0 // Put it at the very top
+    )
+    default boolean testMode() {
+        return false;
+    }
 
     @ConfigItem(
         keyName = "venomColor",
