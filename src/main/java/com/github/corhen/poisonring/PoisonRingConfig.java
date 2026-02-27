@@ -29,22 +29,22 @@ public interface PoisonRingConfig extends Config {
     }
 
     @ConfigItem(
-        keyName = "sizeAdjust",
+        keyName = "diameter",
         name = "Diameter",
         description = "Shrinks (negative) or expands (positive) the circle diameter",
         position = 3
     )
-    default int sizeAdjust() {
+    default int diameter() {
         return -1;
     }
 
     @ConfigItem(
-        keyName = "strokeWidth",
+        keyName = "lineThickness",
         name = "Line Thickness",
         description = "Changes the thickness of the ring",
         position = 4
     )
-    default int strokeWidth() {
+    default int lineThickness() {
         return 2;
     }
 
@@ -57,7 +57,7 @@ public interface PoisonRingConfig extends Config {
     default Color poisonColor() {
         return new Color(0, 255, 0, 255);
     }
-    
+
     @ConfigItem(
         keyName = "testMode",
         name = "Test Mode",

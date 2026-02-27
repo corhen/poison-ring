@@ -46,21 +46,21 @@ public class PoisonRingOverlay extends Overlay {
 
         int finalX = baseOrbX + config.shiftX();
         int finalY = baseOrbY + config.shiftY();
-        int finalDiameter = bounds.height + config.sizeAdjust();
+        int finalDiameter = bounds.height + config.diameter();
         
         double progress;
         if (config.testMode() && plugin.getTicksUntilDamage() == 0) {
             progress = 0.5; // Show a half-circle in test mode so you can see the arc
         } else {
             progress = (double) plugin.getTicksUntilDamage() / plugin.getPoisonTickRate();
-        };
+        }
         
         int startAngle = 90;
         int extent = (int) -(360 * progress); 
 
         graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         graphics.setColor(plugin.isVenom() ? config.venomColor() : config.poisonColor());
-        graphics.setStroke(new BasicStroke(config.strokeWidth()));
+        graphics.setStroke(new BasicStroke(config.lineThickness()));
 
         Arc2D.Double arc = new Arc2D.Double(
             finalX, 
