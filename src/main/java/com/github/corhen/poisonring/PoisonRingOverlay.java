@@ -9,7 +9,7 @@ import java.awt.geom.Arc2D;
 import javax.inject.Inject;
 import net.runelite.api.Client;
 import net.runelite.api.widgets.Widget;
-import net.runelite.api.widgets.WidgetInfo;
+import net.runelite.api.widgets.ComponentID;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayLayer;
 import net.runelite.client.ui.overlay.OverlayPosition;
@@ -34,7 +34,7 @@ public class PoisonRingOverlay extends Overlay {
             return null;
         }
 
-        Widget healthOrb = client.getWidget(WidgetInfo.MINIMAP_HEALTH_ORB);
+        Widget healthOrb = client.getWidget(ComponentID.MINIMAP_HEALTH_ORB);
         if (healthOrb == null || healthOrb.isHidden()) {
             return null;
         }
