@@ -5,7 +5,7 @@ A lightweight RuneLite plugin that adds a visual 'countdown' ring around the HP 
 ## Features
 * **Visual Countdown:** A green arc that tracks the 30-tick cycle between poison/venom hits.
 * **Smart Tracking:** Automatically resyncs with hitsplats and handles immunity states (anti-venoms) correctly.
-* **Fully Customizable:** Integrated with RuneLite's config panel to allow users to adjust:
+* **Customizable:** Integrated with RuneLite's config panel to allow users to adjust:
     * Ring X/Y offsets
     * Circle diameter
     * Line thickness

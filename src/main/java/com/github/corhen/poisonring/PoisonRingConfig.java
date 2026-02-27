@@ -30,7 +30,7 @@ public interface PoisonRingConfig extends Config {
 
     @ConfigItem(
         keyName = "sizeAdjust",
-        name = "Size Adjustment",
+        name = "Diameter",
         description = "Shrinks (negative) or expands (positive) the circle diameter",
         position = 3
     )
